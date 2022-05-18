@@ -1,0 +1,53 @@
+<!-- This is the home page of our project which has links to Survey form and to view submitted form -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+      <a href="/home" class="w3-bar-item w3-button"><b>SWE 642 HW3</b></a>
+      <!-- Float links to the right. Hide them on small screens -->
+      <!-- This navbar has links to the survey form and the list surveys components -->
+      <div class="w3-right w3-hide-small">
+        <a routerLink="/form" class="w3-bar-item w3-button">Survey Form</a>
+        <a routerLink="/list" class="w3-bar-item w3-button">All Surveys</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+    <img class="w3-image" src="/assets/img/Engg.jpeg" width="1500" height="800">
+    <div class="w3-display-middle w3-margin-top w3-center">
+      <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Welcome to our home
+            page!</b></span></h1>
+      <h2>
+        <div class="w3-padding w3-black w3-opacity-min">
+          <p>
+            <a routerLink="/form">Survey Form</a>
+            <br>
+            <a routerLink="/list">All Surveys</a>
+          </p>
+        </div>
+      </h2>
+    </div>
+  </header>
+
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-16">
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+        class="w3-hover-text-green">w3.css</a></p>
+  </footer>
+
+</body>
+
+</html>

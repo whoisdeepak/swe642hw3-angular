@@ -1,0 +1,134 @@
+
+    <div class="header">
+        <h1>CS Department Survey Page</h1>
+    </div>
+
+    <div class="header2">
+        <h3>Please fill out the form below</h3>
+    </div>
+    
+    <div class="container">
+        <form #submitDetails="ngForm" (ngSubmit)="onClickingSubmit(submitDetails.value)" ngNativeValidate>
+
+            <div class="row">
+                <div class="col-20">
+                    <label for="uname">User Name <span style="color:red"><sup>*required</sup></span></label>
+                </div>
+                <div class="col-80">
+                    <input type="text" id="name" name="name" ngModel placeholder="First and last name"
+                        autofocus="autofocus" [required]="true">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-20">
+                    <label for="address">Street Adress <span style="color:red"><sup>*required</sup></span></label>
+                </div>
+                <div class="col-80">
+                    <input type="text" id="address" name="address" ngModel required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-20">
+                    <label for="city">City <span style="color:red"><sup>*required</sup></span></label>
+                </div>
+                <div class="col-80">
+                    <input type="text" id="city" name="city" ngModel required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-20">
+                    <label for="state">State <span style="color:red"><sup>*required</sup></span></label>
+                </div>
+                <div class="col-80">
+                    <input type="text" id="state" name="state" ngModel required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-20">
+                    <label for="zip">Zip <span style="color:red"><sup>*required</sup></span></label>
+                </div>
+                <div class="col-80">
+                    <input type="text" id="zip" name="zip" ngModel placeholder="Enter a valid zip code" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-20">
+                    <label for="tnumber">Telephone Number <span style="color:red"><sup>*required</sup></span></label>
+                </div>
+                <div class="col-80">
+                    <input type="text" id="phone" name="phone" ngModel placeholder="Enter numbers, not text"
+                        required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-20">
+                    <label for="email">E-mail <span style="color:red"><sup>*required</sup></span></label>
+                </div>
+                <div class="col-80">
+                    <input type="text" id="email" name="email" ngModel required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-20">
+                    <label for="surveydate">Date of survey <span style="color:red"><sup>*required</sup></span></label>
+                </div>
+                <div class="col-80">
+                    <input type="text" id="surveyDate" name="surveyDate" ngModel placeholder="mm/dd/yyyy" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="fname">What did you like the most about the campus</label>
+                <div *ngFor="let item of checkboxesDataList">
+                    <input type="checkbox" name="liked" id="" [(ngModel)]="item.isChecked">{{item.label}}
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-20">
+                    <label for="fname">How did you become interested in the university</label>
+                </div>
+                <div class="col-80">
+                    <input type="radio" id="friends" name="interest" value="friends" ngModel>
+                    <label for="friends">Friends</label>
+                    <input type="radio" id="telivision" name="interest" value="telivision" ngModel>
+                    <label for="telivision">Telivision</label>
+                    <input type="radio" id="internet" name="interest" value="internet" ngModel>
+                    <label for="internet">Internet</label>
+                    <input type="radio" id="other" name="interest" value="other" ngModel>
+                    <label for="other">Other</label>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-20">
+                    <label for="likelihood">What is the likelihood of you recommending this school to prospective
+                        students</label>
+                </div>
+                <div class="col-80">
+                    <select id="likelihood" name="recommend" ngModel>
+                        <option value="vlikely">Very Likely</option>
+                        <option value="likely">Likely</option>
+                        <option value="unlikely">Unlikely</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-20">
+                    <label for="comments">Additional comments</label>
+                </div>
+                <div class="col-80">
+                    <textarea id="comments" name="comments" style="height:100px" ngModel></textarea>
+                </div>
+            </div>
+            <br>
+            <div class="row col-20">
+                <input type="reset" value="Cancel">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,40 @@
+<!-- This HTML template loads all the submitted data by fetching from the database -->
+<!-- This table rows dynamically increases with the number of sql entried that we submitted earlier -->
+<div class="table-responsive">
+    <table class="table table-bordered table-hover border-secondary">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Date of survey</th>
+                <th>What they liked</th>
+                <th>How they found GMU</th>
+                <th>Would they recommend GMU to others</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-dark" *ngFor="let user of users">
+                <td>{{user.number}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.address}}</td>
+                <td>{{user.city}}</td>
+                <td>{{user.state}}</td>
+                <td>{{user.zip}}</td>
+                <td>{{user.phone}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.surveyDate}}</td>
+                <td>{{user.liked}}</td>
+                <td>{{user.interest}}</td>
+                <td>{{user.recommend}}</td>
+                <td>{{user.comments}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
